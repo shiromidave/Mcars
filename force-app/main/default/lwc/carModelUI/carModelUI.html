@@ -1,0 +1,46 @@
+<template>
+    <div class="slds-p-bottom_large slds-p-left_large" 
+    style=" text-align: left; font-style: italic; border: black; color:crimson; background-color: rgba(31, 29, 29, 0.801); ">
+    
+        <lightning-card title="View Car Model Details " 
+        style="color: rgb(7, 29, 104); background-color: dodgerblue;text-underline-position: below; text-underline-offset: inherit; text-underline-offset: auto;  ">
+        <lightning-input type = "checkbox"
+                         label="Show/Hide"
+                         checked = {showFields}
+                         onchange={toggleFields}>
+</lightning-input >
+        <lightning-record-view-form record-id={recordId} object-api-name={objectName} density="compact" style="color: blue; background-color: cornflowerblue;">
+            <template if:true={showFields}>
+            <div class="slds-box" style="color: rgb(42, 18, 126);">
+
+                <lightning-output-field field-name="Image__c" ></lightning-output-field>
+                <lightning-output-field field-name="Name" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+             <!--  <lightning-output-field field-name="Colour__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field> -->
+                <lightning-output-field field-name="Transmission__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Airbags__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Seating_Capacity__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Transmission__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Engine_Displacement__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Features_Specs__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Mileage__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Car_Price__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Car_Rating__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Ready_to_Buy__c	" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Interior_Color__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field>
+                <lightning-output-field field-name="Exterior_Color__c" style="color: rgb(42,18,126); font-size: 10px; background-color: cornflowerblue;"></lightning-output-field><br/>
+                <br/>
+                <br/>
+                
+                    <lightning-button label = "OK" variant = "destructive"  class = "slds-m-around_medium" onclick = {navHandler}>
+
+                    </lightning-button>
+                
+
+        </div>
+    </template>
+
+        </lightning-record-view-form>
+      
+    </lightning-card>
+</div>
+</template>

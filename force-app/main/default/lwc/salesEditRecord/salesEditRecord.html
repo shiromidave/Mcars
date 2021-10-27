@@ -1,0 +1,31 @@
+<template>
+    <div class="slds-p-bottom_large slds-p-left_large" 
+    style=" text-align: left; font-style: italic; border: black; color:crimson; background-color: rgba(166, 227, 255, 0.801); ">
+    
+            <lightning-card title="Customize your options" style="background-color: blue; color:black">
+                <lightning-input type = "checkbox"
+                         label="Show/Hide"
+                         checked = {showFields}
+                         onchange={toggleFields}>
+</lightning-input >
+                <lightning-record-edit-form record-id={recordId} object-api-name={objname}>
+                    <template if:true={showFields}>
+                        <div class="slds-box" style="color: rgb(42, 18, 126);">
+                    <lightning-input-field field-name="Car_Price__c" style="background-color: rgb(243, 243, 166);"></lightning-input-field>
+                    <lightning-input-field field-name="Seating_Capacity__c" style="background-color: rgb(243, 243, 166);"></lightning-input-field>
+                    <lightning-input-field field-name="Mileage__c" style="background-color: rgb(243, 243, 166);"></lightning-input-field>
+                    <lightning-input-field field-name="Features_Specs__c" style="background-color: rgb(243, 243, 166);"></lightning-input-field>
+                    <lightning-input-field field-name="Transmission__c" style="background-color: rgb(243, 243, 166);"></lightning-input-field>
+                <!--   <lightning-input-field field-name="Image__c" style="background-color: rgb(243, 243, 166);"></lightning-input-field>  -->
+
+
+                    
+                    <lightning-button label="Customize & Generate final price" variant="success" type="submit"></lightning-button>&nbsp;&nbsp;
+                    <lightning-button label ="Cancel" variant="destructive" type="Cancel"></lightning-button>
+                        </div>
+                    </template>
+                </lightning-record-edit-form>
+            </lightning-card>
+    
+    </div>
+</template>
