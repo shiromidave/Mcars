@@ -1,4 +1,4 @@
-# Ecars
+# Mcars
 
 A Salesforce application of a car manufacturing company which produces and sells cars.This app handles all car related information which are accessible by all users.
 This app has various users with different roles such as company executives, factory executives, digital marketers, customers, quality analysts, sales executives, car dealers and cutomer service representatives.
