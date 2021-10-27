@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title = "Customize" style=" font-style: italic;">
+
+        <div class="slds-wrap slds-grid" >
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input label="Car Model Name" type="text" value={carmodelname} name="carMName" style="background-color: rgb(243, 243, 166);" onchange={CarHandler}></lightning-input></p></div>         
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input label="Exterior color" type="text" value={carexterior} name="carEx" style="background-color: rgb(243, 243, 166);" onchange={CarHandler}></lightning-input></p></div>         
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input label="Interior Color" type="text" value={carinterior} name="carIn" style="background-color: rgb(243, 243, 166);" onchange={CarHandler}></lightning-input></p></div>         
+            <div class="slds-col slds-size_6-of-12 slds-p-horizontal--small slds-m-bottom--medium"><p><lightning-input label=" Final Car Price" type="Number" value={carprice} name="carP"  style="background-color: rgb(243, 243, 166);" onchange={CarHandler}></lightning-input></p></div>
+        
+         
+             <br/>  <br/>
+            <div class="slds-text-align--center slds-m-top--medium" style="text-align:center; width:40px; margin:auto;">
+                <lightning-button type="brand" label="Submit" variant="success" size="small" onclick={submitAction}></lightning-button>
+            </div>
+       </div>
+
+        <br/><br/>
+ 
+    </lightning-card>
+</template>
